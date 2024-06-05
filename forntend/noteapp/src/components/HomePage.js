@@ -1,7 +1,6 @@
 import React from "react";
 import {  useNavigate } from 'react-router-dom';
 import axios from "axios";
-import { toast } from 'react-toastify';
 
 export const HomePage = () => {
   
@@ -24,13 +23,11 @@ export const HomePage = () => {
           } else {
             console.error("File ID is undefined");
           }
-          toast.success('Note created successfully !');
         });
       } catch (error) {
-        toast.error('Failed to create a note. Please try again !!');
+       
         console.log(error);
       }
-      
 
       navigate('/texteditor');
     };
